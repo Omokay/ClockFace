@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+ <html lang=en>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="clock.css"/>
+    <title> CSSJS ClOCK</title>
+    </head>
+    <body>
+        <div class="clock">
+            <div class="clock-body">
+                <div class="hand seconds"></div>
+                <div class="hand minutes"></div>
+                <div class="hand hours"></div>
+                <div class="center"></div>
+            </div>
+        </div>
+
+        <div class="text">
+            <p class="appName">Simple CSS/JS Clock</p>
+        </div> 
+
+        <div class="color-codes">
+            <div class="box hour-box"></div><span>Hour Hand</span>
+            <div class="box min-box"></div><span>Minute Hand</span>
+            <div class="box sec-box"></div><span>Second Hand</span>
+        </div> 
+
+       
+    <script>
+        const secondsHand = document.querySelector('.seconds');
+        const minutesHand = document.querySelector('.minutes');
+        const hoursHand = document.querySelector('.hours');
+
+        function startTime(){
+            const date = new Date();
+            const second = date.getSeconds();
+            const secondsDegree = ((second / 60) * 360) + 90;
+            
+            secondsHand.style.transform = `rotate(${secondsDegree}deg)`;
+
+            const minute = date.getMinutes();
+            const minutesDegree = ((minute / 60 ) * 360) + 90;
+            console.log(minute);
+
+            minutesHand.style.transform = `rotate(${minutesDegree}deg)`;
+
+            const hour = date.getHours();
+            const hoursDegree = (((hour / 12) * 360) + 90);
+            
+
+            hoursHand.style.transform = `rotate(${hoursDegree}deg)`;
+        }
+
+        setInterval(startTime, 1000);
+
+</script>
+    </body>
+    
+ </html>
+

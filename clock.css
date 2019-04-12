@@ -1,0 +1,111 @@
+body{
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+}
+
+.center{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: black;
+    position: absolute;
+    top: 49%;
+    left: 48%;
+    
+
+}
+
+.clock{
+    width: 20rem;
+    height: 20rem;
+    border: 20px solid darkorchid;
+    border-radius: 50%;
+    padding: 2rem;
+    margin: 50px auto;
+    position: relative;
+}
+
+.clock-body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+}
+
+.hand{
+    width: 50%;
+    height: 5px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition-timing-function: ease-in-out;
+
+}
+
+.hours{
+    background: darkslategray !important;
+}
+
+.minutes{
+    background: rgb(53, 49, 49) !important;
+    
+}
+
+.seconds{
+    background: lightslategray !important;
+}
+
+
+.appName{
+    align-content: center;
+    justify-content: center;
+    color: darkorchid;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.hour-box{
+    width: 10px;
+    height: 10px;
+    background: darkslategray;
+}
+
+.min-box{
+    width: 10px;
+    height: 10px;
+    background: rgb(53, 49, 49);
+}
+
+.sec-box{
+    width: 10px;
+    height: 10px;
+    background: lightslategray;
+}
+
+
+.box{
+    padding-bottom: 5px;
+    margin-right: 5px;
+}
+.text{
+    margin: 0 auto;
+    padding-right: 100px;
+    padding-left: 20px;
+}
+
+.color-codes{
+    margin: 0 auto;
+    display: flex;
+    align-content: center;
+    padding-left: 20px;
+}
+
+span{
+    margin-right: 10px;
+}
+
